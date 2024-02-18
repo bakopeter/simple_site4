@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] == 'send_order')
     echo '
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             Rendelés sikeresen elküldve!
-            <button type="button" class="btn-close" data-bs-dismis="alert" aria-label="Bezár"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Bezár"></button>
         </div>
     ';
 }
@@ -86,11 +86,7 @@ $sumTotal = 0;
             <input type="submit" value="Kosár ürítése" class="btn btn-outline-warning">
         </form>
     </div>
-<?php else: ?>
-    <div class="alert alert-warning" role="alert">A kosár üres!</div>
-<?php endif; ?>
-
-<h4>Számlázási adatok</h4>
+    <h4>Számlázási adatok</h4>
     <form action="/cart.php" method="post">
         <input type="hidden" name="action" value="send_order"/>
         <input type="hidden" name="sum_total" value=<?= $sumTotal ?>>
@@ -121,6 +117,9 @@ $sumTotal = 0;
                    value="Rendelés leadása" />
         </div>
     </form>
+<?php else: ?>
+    <div class="alert alert-warning" role="alert">A kosár üres!</div>
+<?php endif; ?>
     <br>
 <?php
 require_once "layout/footer.php";
