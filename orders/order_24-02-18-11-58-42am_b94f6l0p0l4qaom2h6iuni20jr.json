@@ -1,0 +1,23 @@
+{
+  "name": "Bak\u00f3 p\u00e9ter",
+  "email": "bakopeter71@gmail.com",
+  "comment": "\u00dczletben veszem \u00e1t.",
+  "products": [
+    {
+      "name": "Kutya eledel",
+      "price": 1500,
+      "quantity": 4
+    },
+    {
+      "name": "Macska kefe",
+      "price": 1000,
+      "quantity": "5"
+    },
+    {
+      "name": "Macska bolhanyak\u00f6rv",
+      "price": 1100,
+      "quantity": "8"
+    }
+  ],
+  "sumTotal": "19800"
+}
